@@ -14,6 +14,7 @@ export type SectionItem = {
   title: string; // proper noun — usually kept the same in all languages
   description: LocalizedText;
   image?: string; // public path, e.g. /images/listings/foo.jpg
+  imageKind?: "photo" | "logo"; // "logo" renders contained (not cropped) on a soft bg
   href?: string; // optional link to a /guias/[slug] page or external URL
   phone?: string; // E.164 without + for tel: links
   address?: string;
@@ -41,6 +42,7 @@ export const sections: Section[] = [
     items: [
       {
         title: "Policía",
+        image: "/images/listings/policia.jpg",
         phone: "911",
         description: {
           es: "Emergencias 24 hs. Línea directa de la Policía de la Ciudad.",
@@ -50,6 +52,7 @@ export const sections: Section[] = [
       },
       {
         title: "Bomberos",
+        image: "/images/listings/bomberos.jpg",
         phone: "100",
         description: {
           es: "Incendios, accidentes y emergencias. Atención 24 hs.",
@@ -59,6 +62,7 @@ export const sections: Section[] = [
       },
       {
         title: "SAME",
+        image: "/images/listings/same-ambulancia.jpg",
         phone: "107",
         description: {
           es: "Servicio gratuito de ambulancias y atención médica de urgencia.",
@@ -68,6 +72,7 @@ export const sections: Section[] = [
       },
       {
         title: "Defensa Civil",
+        image: "/images/listings/bomberos.jpg",
         phone: "103",
         description: {
           es: "Asistencia en catástrofes, incendios, inundaciones y rescates.",
@@ -77,6 +82,7 @@ export const sections: Section[] = [
       },
       {
         title: "Turismo",
+        image: "/images/listings/policia.jpg",
         phone: "+541143162128",
         description: {
           es: "Policía Turística de la Ciudad de Buenos Aires. Asistencia al visitante.",
@@ -86,6 +92,7 @@ export const sections: Section[] = [
       },
       {
         title: "Violencia de género",
+        image: "/images/listings/policia.jpg",
         phone: "144",
         description: {
           es: "Línea nacional gratuita, atención las 24 hs.",
@@ -109,6 +116,7 @@ export const sections: Section[] = [
       {
         title: "El Bodegón de Madero",
         image: "/images/listings/el-bodegon-de-madero.png",
+        imageKind: "logo",
         address: "Puerto Madero",
         mapsQuery: "El Bodegón de Madero Puerto Madero",
         description: {
@@ -120,6 +128,7 @@ export const sections: Section[] = [
       {
         title: "Siga La Vaca",
         image: "/images/listings/siga-la-vaca.jpeg",
+        imageKind: "logo",
         address: "Puerto Madero",
         mapsQuery: "Siga La Vaca Puerto Madero",
         description: {
@@ -131,6 +140,7 @@ export const sections: Section[] = [
       {
         title: "Sagardi",
         image: "/images/listings/sagardi.png",
+        imageKind: "logo",
         address: "Humberto 1° 320, San Telmo",
         mapsQuery: "Sagardi San Telmo Buenos Aires",
         description: {
@@ -142,6 +152,7 @@ export const sections: Section[] = [
       {
         title: "Jugador 12",
         image: "/images/listings/jugador-12.jpg",
+        imageKind: "logo",
         address: "Puerto Madero",
         mapsQuery: "Jugador 12 Puerto Madero",
         description: {
@@ -153,6 +164,7 @@ export const sections: Section[] = [
       {
         title: "Free Hugs",
         image: "/images/listings/free-hugs.png",
+        imageKind: "logo",
         address: "Junto al edificio",
         hours: "24 hs",
         description: {
@@ -164,6 +176,7 @@ export const sections: Section[] = [
       {
         title: "La Veneciana",
         image: "/images/listings/la-veneciana.jpg",
+        imageKind: "logo",
         mapsQuery: "La Veneciana heladería Buenos Aires",
         description: {
           es: "Heladería tradicional emblema de la herencia italiana en Buenos Aires. Sabores clásicos y cremas artesanales.",
@@ -174,6 +187,7 @@ export const sections: Section[] = [
       {
         title: "Plaza Asturias",
         image: "/images/listings/plaza-asturias.png",
+        imageKind: "logo",
         address: "Av. de Mayo 1199, Monserrat",
         mapsQuery: "Plaza Asturias Av. de Mayo Buenos Aires",
         description: {
@@ -184,6 +198,7 @@ export const sections: Section[] = [
       },
       {
         title: "Cabaña Las Lilas",
+        image: "/images/listings/parrilla.jpg",
         address: "Av. Alicia Moreau de Justo 516",
         mapsQuery: "Cabaña Las Lilas Puerto Madero",
         description: {
@@ -208,6 +223,7 @@ export const sections: Section[] = [
       {
         title: "La Puerta Roja",
         image: "/images/listings/puerta-roja.png",
+        imageKind: "logo",
         address: "Chacabuco 733, San Telmo",
         mapsQuery: "La Puerta Roja San Telmo",
         description: {
@@ -218,6 +234,7 @@ export const sections: Section[] = [
       },
       {
         title: "Doppelgänger",
+        image: "/images/listings/bar-san-telmo.jpg",
         address: "Av. Juan de Garay 500, San Telmo",
         mapsQuery: "Doppelgänger bar San Telmo",
         description: {
@@ -228,6 +245,7 @@ export const sections: Section[] = [
       },
       {
         title: "Bar Plaza Dorrego",
+        image: "https://images.pexels.com/photos/14201458/pexels-photo-14201458.jpeg?auto=compress&cs=tinysrgb&w=800",
         address: "Defensa 1098, San Telmo",
         mapsQuery: "Bar Plaza Dorrego San Telmo",
         description: {
@@ -238,6 +256,7 @@ export const sections: Section[] = [
       },
       {
         title: "Bar Sur",
+        image: "/images/listings/bar-sur.jpg",
         address: "Estados Unidos 299, San Telmo",
         mapsQuery: "Bar Sur San Telmo tango",
         description: {
@@ -248,6 +267,7 @@ export const sections: Section[] = [
       },
       {
         title: "Boticario",
+        image: "https://images.pexels.com/photos/17651216/pexels-photo-17651216.jpeg?auto=compress&cs=tinysrgb&w=800",
         address: "Venezuela 1413, Monserrat",
         mapsQuery: "Boticario bar Buenos Aires",
         description: {
@@ -258,6 +278,7 @@ export const sections: Section[] = [
       },
       {
         title: "Gran Bar Danzón",
+        image: "https://images.pexels.com/photos/17864107/pexels-photo-17864107.jpeg?auto=compress&cs=tinysrgb&w=800",
         address: "Libertad 1161, Recoleta",
         mapsQuery: "Gran Bar Danzón Buenos Aires",
         description: {
@@ -281,6 +302,7 @@ export const sections: Section[] = [
     items: [
       {
         title: "Farmacity Puerto Madero",
+        image: "/images/listings/farmacity.jpg",
         address: "Av. Alicia Moreau de Justo 240",
         hours: "24 hs",
         mapsQuery: "Farmacity Puerto Madero Alicia Moreau de Justo",
@@ -292,6 +314,7 @@ export const sections: Section[] = [
       },
       {
         title: "Farmacity San Telmo",
+        image: "/images/listings/farmacity.jpg",
         address: "Av. Paseo Colón 255",
         mapsQuery: "Farmacity Paseo Colón San Telmo",
         description: {
@@ -302,6 +325,7 @@ export const sections: Section[] = [
       },
       {
         title: "Farmacity Monserrat",
+        image: "/images/listings/farmacity.jpg",
         address: "Av. Belgrano 499",
         mapsQuery: "Farmacity Belgrano Monserrat",
         description: {
@@ -312,6 +336,7 @@ export const sections: Section[] = [
       },
       {
         title: "Dr. Ahorro",
+        image: "/images/listings/farmacity.jpg",
         address: "Av. Independencia 1600",
         mapsQuery: "Dr. Ahorro Independencia Buenos Aires",
         description: {
@@ -322,6 +347,7 @@ export const sections: Section[] = [
       },
       {
         title: "Farmacia Suizo Argentina",
+        image: "/images/listings/farmacity.jpg",
         address: "Chacabuco 402, San Telmo",
         mapsQuery: "Farmacia Suizo Argentina San Telmo",
         description: {
@@ -345,6 +371,7 @@ export const sections: Section[] = [
     items: [
       {
         title: "Coto Puerto Madero",
+        image: "/images/listings/coto.jpg",
         address: "Av. Alicia Moreau de Justo 540",
         mapsQuery: "Coto Puerto Madero",
         description: {
@@ -355,6 +382,7 @@ export const sections: Section[] = [
       },
       {
         title: "Carrefour Express Puerto Madero",
+        image: "/images/listings/carrefour.jpg",
         address: "Puerto Madero",
         mapsQuery: "Carrefour Express Puerto Madero",
         description: {
@@ -365,6 +393,7 @@ export const sections: Section[] = [
       },
       {
         title: "Jumbo San Telmo",
+        image: "/images/listings/jumbo.jpg",
         address: "Av. San Juan 2550",
         mapsQuery: "Jumbo San Juan Buenos Aires",
         description: {
@@ -375,6 +404,7 @@ export const sections: Section[] = [
       },
       {
         title: "Carrefour Perú",
+        image: "/images/listings/carrefour.jpg",
         address: "Perú 900, San Telmo",
         mapsQuery: "Carrefour Perú San Telmo",
         description: {
@@ -385,6 +415,7 @@ export const sections: Section[] = [
       },
       {
         title: "Día Balcarce",
+        image: "/images/listings/coto.jpg",
         address: "Balcarce 1100, San Telmo",
         mapsQuery: "Día Balcarce San Telmo",
         description: {
@@ -395,6 +426,7 @@ export const sections: Section[] = [
       },
       {
         title: "Mercado de San Telmo",
+        image: "/images/listings/san-telmo.jpg",
         address: "Defensa 961, San Telmo",
         mapsQuery: "Mercado de San Telmo Defensa",
         description: {
@@ -418,6 +450,7 @@ export const sections: Section[] = [
     items: [
       {
         title: "Tarjeta SUBE",
+        image: "/images/listings/sube.jpg",
         description: {
           es: "Tarjeta recargable para subte, colectivos y trenes. Se compra en kioscos y estaciones.",
           en: "Rechargeable card for subway, buses and trains. Buy at kiosks and stations.",
@@ -425,31 +458,37 @@ export const sections: Section[] = [
         },
       },
       {
-        title: "Subte línea B — L. N. Alem",
+        title: "Red de Subte — Mapa",
+        image: "/images/listings/subte-mapa.jpg",
         description: {
-          es: "Estación más cercana al edificio. Conecta con Once, Federico Lacroze y todo el eje norte.",
-          en: "The closest subway station to the building. Connects to Once, Federico Lacroze and the entire north axis.",
-          pt: "Estação de metrô mais próxima ao edifício. Conecta com Once, Federico Lacroze e todo o eixo norte.",
+          es: "6 líneas (A, B, C, D, E y H) que conectan el centro con los barrios. Se paga con tarjeta SUBE.",
+          en: "6 lines (A, B, C, D, E and H) connecting the centre to the neighbourhoods. Pay with the SUBE card.",
+          pt: "6 linhas (A, B, C, D, E e H) conectando o centro aos bairros. Pague com o cartão SUBE.",
         },
       },
       {
-        title: "Subte línea E — Bolívar",
+        title: "Uber",
+        image: "/images/listings/uber-logo.jpg",
+        imageKind: "logo",
         description: {
-          es: "Cruza el sur de la ciudad. Ideal para llegar a San Telmo, Constitución y Parque Patricios.",
-          en: "Crosses the south of the city. Ideal for reaching San Telmo, Constitución and Parque Patricios.",
-          pt: "Cruza o sul da cidade. Ideal para chegar a San Telmo, Constitución e Parque Patricios.",
+          es: "App de viajes disponible en toda la ciudad. Pago con tarjeta, sin efectivo.",
+          en: "Ride-hailing app available throughout the city. Card payment, no cash needed.",
+          pt: "App de transporte disponível em toda a cidade. Pagamento com cartão, sem dinheiro.",
         },
       },
       {
-        title: "Uber / Cabify / Didi",
+        title: "DiDi",
+        image: "/images/listings/didi-logo.jpg",
+        imageKind: "logo",
         description: {
-          es: "Apps de viajes disponibles en toda la ciudad. Pago con tarjeta, sin efectivo.",
-          en: "Ride-hailing apps available throughout the city. Card payment, no cash needed.",
-          pt: "Apps de transporte disponíveis em toda a cidade. Pagamento com cartão, sem dinheiro.",
+          es: "Alternativa económica a Uber. App de viajes con tarifas competitivas en Buenos Aires.",
+          en: "A budget-friendly Uber alternative. Ride-hailing app with competitive fares in Buenos Aires.",
+          pt: "Alternativa econômica ao Uber. App de transporte com tarifas competitivas em Buenos Aires.",
         },
       },
       {
         title: "Taxi",
+        image: "https://images.pexels.com/photos/2438327/pexels-photo-2438327.jpeg?auto=compress&cs=tinysrgb&w=800",
         description: {
           es: "Taxis negros y amarillos habilitados. Pedir siempre el uso del taxímetro.",
           en: "Licensed black-and-yellow taxis. Always ask for the meter to be used.",
@@ -549,7 +588,7 @@ export const sections: Section[] = [
       },
       {
         title: "Cementerio de la Recoleta",
-        image: "/images/listings/recoleta.jpg",
+        image: "https://images.pexels.com/photos/33583570/pexels-photo-33583570.jpeg?auto=compress&cs=tinysrgb&w=800",
         mapsQuery: "Cementerio de la Recoleta",
         description: {
           es: "Mausoleos centenarios, esculturas notables y la tumba de Eva Perón. Uno de los cementerios más bellos del mundo.",
@@ -583,6 +622,7 @@ export const sections: Section[] = [
       {
         title: "River Plate Experience",
         image: "/images/listings/river-experience.jpg",
+        imageKind: "logo",
         mapsQuery: "Estadio Monumental River Plate",
         description: {
           es: "Entradas en plateas con excelentes ubicaciones para partidos de River y la Selección Argentina en el Estadio Monumental.",
