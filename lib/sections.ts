@@ -214,7 +214,7 @@ export const sections: Section[] = [
       },
       {
         title: "El Obrero",
-        image: "/images/listings/el-obrero.jpg",
+        image: "/images/listings/el-obrero-real.jpg",
         address: "Agustín R. Caffarena 64, La Boca",
         mapsQuery: "El Obrero restaurante La Boca Buenos Aires",
         description: {
