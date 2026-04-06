@@ -1,26 +1,27 @@
 import type { Metadata } from "next";
-import { Montserrat, Playfair_Display } from "next/font/google";
+import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  variable: "--font-montserrat",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Guidr — Tu estadía, simple.",
+    default: "Guidr — Your stay, simple.",
     template: "%s · Guidr",
   },
   description:
-    "Guías locales seleccionadas para disfrutar Buenos Aires como un residente.",
+    "Curated local guides to experience Buenos Aires like a resident — for guests staying at our Puerto Madero apartments.",
 };
 
 export default function RootLayout({
@@ -29,8 +30,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${playfair.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col bg-white text-[color:var(--foreground)]">
+    <html
+      lang="es"
+      className={`${inter.variable} ${fraunces.variable} h-full`}
+    >
+      <body className="min-h-full flex flex-col bg-white text-[color:var(--ink-soft)]">
         {children}
       </body>
     </html>

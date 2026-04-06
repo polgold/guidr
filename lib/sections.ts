@@ -20,6 +20,7 @@ export type SectionItem = {
   address?: string;
   mapsQuery?: string; // used to build a Google Maps search link
   hours?: string;
+  links?: { label: string; url: string }[]; // app stores, external links
 };
 
 export type Section = {
@@ -127,8 +128,7 @@ export const sections: Section[] = [
       },
       {
         title: "Siga La Vaca",
-        image: "/images/listings/siga-la-vaca.jpeg",
-        imageKind: "logo",
+        image: "/images/listings/siga-la-vaca-photo.jpg",
         address: "Puerto Madero",
         mapsQuery: "Siga La Vaca Puerto Madero",
         description: {
@@ -139,8 +139,7 @@ export const sections: Section[] = [
       },
       {
         title: "Sagardi",
-        image: "/images/listings/sagardi.png",
-        imageKind: "logo",
+        image: "/images/listings/sagardi-photo.jpg",
         address: "Humberto 1° 320, San Telmo",
         mapsQuery: "Sagardi San Telmo Buenos Aires",
         description: {
@@ -186,8 +185,7 @@ export const sections: Section[] = [
       },
       {
         title: "Plaza Asturias",
-        image: "/images/listings/plaza-asturias.png",
-        imageKind: "logo",
+        image: "/images/listings/plaza-asturias-photo.jpg",
         address: "Av. de Mayo 1199, Monserrat",
         mapsQuery: "Plaza Asturias Av. de Mayo Buenos Aires",
         description: {
@@ -222,8 +220,7 @@ export const sections: Section[] = [
     items: [
       {
         title: "La Puerta Roja",
-        image: "/images/listings/puerta-roja.png",
-        imageKind: "logo",
+        image: "/images/listings/puerta-roja-photo.jpg",
         address: "Chacabuco 733, San Telmo",
         mapsQuery: "La Puerta Roja San Telmo",
         description: {
@@ -465,6 +462,9 @@ export const sections: Section[] = [
           en: "6 lines (A, B, C, D, E and H) connecting the centre to the neighbourhoods. Pay with the SUBE card.",
           pt: "6 linhas (A, B, C, D, E e H) conectando o centro aos bairros. Pague com o cartão SUBE.",
         },
+        links: [
+          { label: "Mapa oficial", url: "https://www.buenosaires.gob.ar/subte/mapa-de-la-red" },
+        ],
       },
       {
         title: "Uber",
@@ -475,6 +475,10 @@ export const sections: Section[] = [
           en: "Ride-hailing app available throughout the city. Card payment, no cash needed.",
           pt: "App de transporte disponível em toda a cidade. Pagamento com cartão, sem dinheiro.",
         },
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/app/uber/id368677368" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.ubercab" },
+        ],
       },
       {
         title: "DiDi",
@@ -485,6 +489,23 @@ export const sections: Section[] = [
           en: "A budget-friendly Uber alternative. Ride-hailing app with competitive fares in Buenos Aires.",
           pt: "Alternativa econômica ao Uber. App de transporte com tarifas competitivas em Buenos Aires.",
         },
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/app/didi-pasajero/id1447783498" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.xiaojukeji.didi.global.customer" },
+        ],
+      },
+      {
+        title: "Cabify",
+        image: "/images/listings/taxi-ba.jpg",
+        description: {
+          es: "App de movilidad con vehículos de alta gama. Servicio profesional y tarifa cerrada antes de viajar.",
+          en: "Ride-hailing app with premium vehicles. Professional service and fixed fare before your trip.",
+          pt: "App de mobilidade com veículos premium. Serviço profissional e tarifa fechada antes de viajar.",
+        },
+        links: [
+          { label: "App Store", url: "https://apps.apple.com/app/cabify/id476087442" },
+          { label: "Google Play", url: "https://play.google.com/store/apps/details?id=com.cabify.rider" },
+        ],
       },
       {
         title: "Taxi",

@@ -1,38 +1,89 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #0f172a;
-  --brand: #0067ff;
-  --brand-dark: #005ee9;
-  --surface: #e7f6ff;
-  --muted: #364151;
-  --border: #d1dae5;
+  /* Neutrals */
+  --ink: #0B0F1A;          /* deep navy-black, primary text */
+  --ink-soft: #3B4758;     /* body text */
+  --ink-mute: #8894A6;     /* secondary / meta */
+  --line: #E6E9EE;         /* hairlines */
+  --bg: #FFFFFF;
+  --bg-alt: #F7F5F1;       /* warm cream for alternating sections */
+  --bg-dark: #0B0F1A;
+
+  /* Brand */
+  --brand: #0057FF;        /* deep editorial blue */
+  --brand-dark: #0044CC;
+  --accent: #C89B5C;       /* warm gold accent */
+
+  /* Shadow */
+  --shadow-sm: 0 1px 2px 0 rgba(11, 15, 26, 0.04);
+  --shadow-md: 0 8px 24px -8px rgba(11, 15, 26, 0.12);
+  --shadow-lg: 0 24px 48px -16px rgba(11, 15, 26, 0.18);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  --color-background: var(--bg);
+  --color-foreground: var(--ink);
   --color-brand: var(--brand);
   --color-brand-dark: var(--brand-dark);
-  --color-surface: var(--surface);
-  --color-muted: var(--muted);
-  --color-border: var(--border);
-  --font-sans: var(--font-montserrat);
-  --font-display: var(--font-playfair);
+  --color-accent: var(--accent);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-ink-mute: var(--ink-mute);
+  --color-line: var(--line);
+  --color-bg-alt: var(--bg-alt);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-fraunces);
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-montserrat), system-ui, sans-serif;
-  font-weight: 500;
+  background: var(--bg);
+  color: var(--ink-soft);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-feature-settings: "ss01", "cv11";
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-montserrat), system-ui, sans-serif;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--foreground);
+h1, h2, h3, h4 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  color: var(--ink);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+h5, h6 {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  color: var(--ink);
+  font-weight: 600;
   letter-spacing: -0.01em;
+}
+
+/* Editorial kicker label */
+.kicker {
+  font-family: var(--font-inter), system-ui, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+/* Fine gold rule used as section accent */
+.hairline {
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: var(--accent);
+  margin: 0 12px;
+  vertical-align: middle;
 }
