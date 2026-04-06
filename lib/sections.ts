@@ -20,6 +20,7 @@ export type SectionItem = {
   address?: string;
   mapsQuery?: string; // used to build a Google Maps search link
   hours?: string;
+  proximity?: LocalizedText; // "Walking distance" or "A 100m" etc.
   links?: { label: string; url: string }[]; // app stores, external links
 };
 
@@ -120,6 +121,7 @@ export const sections: Section[] = [
         imageKind: "logo",
         address: "Puerto Madero",
         mapsQuery: "El Bodegón de Madero Puerto Madero",
+        proximity: { es: "A 200 metros", en: "200m walk", pt: "A 200 metros" },
         description: {
           es: "Experiencia clásica porteña a metros del río: cocina abundante, sabores tradicionales y ambiente cálido sin pretensiones.",
           en: "A classic Buenos Aires experience steps from the river: hearty cooking, traditional flavors, warm unpretentious atmosphere.",
@@ -131,6 +133,7 @@ export const sections: Section[] = [
         image: "/images/listings/siga-la-vaca-photo.jpg",
         address: "Puerto Madero",
         mapsQuery: "Siga La Vaca Puerto Madero",
+        proximity: { es: "A 5 min caminando", en: "5 min walk", pt: "A 5 min caminhando" },
         description: {
           es: "Clásico de la parrilla libre porteña: carnes asadas al estilo tradicional y abundantes guarniciones, en un ambiente informal.",
           en: "A classic all-you-can-eat parrilla: traditional grilled meats and plentiful sides in a relaxed setting.",
@@ -154,6 +157,7 @@ export const sections: Section[] = [
         imageKind: "logo",
         address: "Puerto Madero",
         mapsQuery: "Jugador 12 Puerto Madero",
+        proximity: { es: "A 3 min caminando", en: "3 min walk", pt: "A 3 min caminhando" },
         description: {
           es: "Parrilla de espíritu futbolero atravesada por la pasión de Boca Juniors. Carne a la brasa, clima popular y abundancia.",
           en: "A football-loving parrilla full of Boca Juniors spirit. Grilled meats, lively vibe and generous portions.",
@@ -166,6 +170,7 @@ export const sections: Section[] = [
         imageKind: "logo",
         address: "Junto al edificio",
         hours: "24 hs",
+        proximity: { es: "En el edificio", en: "In the building", pt: "No edifício" },
         description: {
           es: "Bar y drugstore 24 hs justo al lado de la entrada. Comida rápida, empanadas, sandwiches, bebidas. Mesas adentro y afuera.",
           en: "24-hour bar and convenience store right next to the entrance. Fast food, empanadas, sandwiches, drinks. Indoor and outdoor seating.",
@@ -175,11 +180,47 @@ export const sections: Section[] = [
       {
         title: "La Veneciana",
         image: "/images/listings/la-veneciana-photo.jpg",
-        mapsQuery: "La Veneciana heladería Buenos Aires",
+        mapsQuery: "La Veneciana heladería Puerto Madero Buenos Aires",
+        proximity: { es: "A 2 min caminando", en: "2 min walk", pt: "A 2 min caminhando" },
         description: {
           es: "Heladería tradicional emblema de la herencia italiana en Buenos Aires. Sabores clásicos y cremas artesanales.",
           en: "A traditional ice-cream parlor, emblem of the Italian heritage in Buenos Aires. Classic flavors and artisan creams.",
           pt: "Sorveteria tradicional, emblema da herança italiana em Buenos Aires. Sabores clássicos e cremes artesanais.",
+        },
+      },
+      {
+        title: "Cabaña Las Lilas",
+        image: "/images/listings/parrilla.jpg",
+        address: "Av. Alicia Moreau de Justo 516",
+        mapsQuery: "Cabaña Las Lilas Puerto Madero",
+        proximity: { es: "A 10 min caminando", en: "10 min walk", pt: "A 10 min caminhando" },
+        description: {
+          es: "La parrilla premium más conocida de Puerto Madero. Cortes selectos de carnes argentinas con vista al dique.",
+          en: "Puerto Madero's most famous premium steakhouse. Select Argentine cuts with a view of the docks.",
+          pt: "A parrilla premium mais conhecida de Puerto Madero. Cortes selecionados de carnes argentinas com vista ao dique.",
+        },
+      },
+      {
+        title: "La Parolaccia del Mare",
+        image: "/images/listings/la-parolaccia.jpg",
+        address: "Av. Alicia Moreau de Justo 1052, Puerto Madero",
+        mapsQuery: "La Parolaccia del Mare Puerto Madero",
+        proximity: { es: "A 10 min caminando", en: "10 min walk", pt: "A 10 min caminhando" },
+        description: {
+          es: "Cocina italiana con protagonismo de pastas caseras y frutos de mar. Ambiente refinado frente al dique con vista panorámica.",
+          en: "Italian cuisine with handmade pastas and seafood. Refined setting facing the dock with panoramic views.",
+          pt: "Cozinha italiana com massas artesanais e frutos do mar. Ambiente refinado em frente ao dique com vista panorâmica.",
+        },
+      },
+      {
+        title: "El Obrero",
+        image: "/images/listings/el-obrero.jpg",
+        address: "Agustín R. Caffarena 64, La Boca",
+        mapsQuery: "El Obrero restaurante La Boca Buenos Aires",
+        description: {
+          es: "Bodegón legendario de La Boca, favorito de Bono y Maradona. Cocina casera porteña, vino de la casa y paredes tapizadas de historia.",
+          en: "A legendary La Boca bodegón, a favorite of Bono and Maradona. Home-style Buenos Aires cooking, house wine and walls covered in history.",
+          pt: "Bodegón lendário de La Boca, favorito de Bono e Maradona. Cozinha caseira portenha, vinho da casa e paredes cobertas de história.",
         },
       },
       {
@@ -191,17 +232,6 @@ export const sections: Section[] = [
           es: "Restaurante clásico de cocina española, tradición, platos abundantes y ambiente familiar desde hace décadas.",
           en: "A classic Spanish restaurant with tradition, generous plates and a family atmosphere for decades.",
           pt: "Restaurante clássico de cozinha espanhola, com tradição, pratos fartos e ambiente familiar há décadas.",
-        },
-      },
-      {
-        title: "Cabaña Las Lilas",
-        image: "/images/listings/parrilla.jpg",
-        address: "Av. Alicia Moreau de Justo 516",
-        mapsQuery: "Cabaña Las Lilas Puerto Madero",
-        description: {
-          es: "La parrilla premium más conocida de Puerto Madero. Cortes selectos de carnes argentinas con vista al dique.",
-          en: "Puerto Madero's most famous premium steakhouse. Select Argentine cuts with a view of the docks.",
-          pt: "A parrilla premium mais conhecida de Puerto Madero. Cortes selecionados de carnes argentinas com vista ao dique.",
         },
       },
     ],
@@ -366,17 +396,6 @@ export const sections: Section[] = [
     },
     items: [
       {
-        title: "Coto Puerto Madero",
-        image: "/images/listings/coto.jpg",
-        address: "Av. Alicia Moreau de Justo 540",
-        mapsQuery: "Coto Puerto Madero",
-        description: {
-          es: "Supermercado grande con todo lo necesario. A pocas cuadras del departamento.",
-          en: "Large supermarket with everything you need. A few blocks from the apartment.",
-          pt: "Supermercado grande com tudo o que você precisa. A poucas quadras do apartamento.",
-        },
-      },
-      {
         title: "Carrefour Express Puerto Madero",
         image: "/images/listings/carrefour.jpg",
         address: "Puerto Madero",
@@ -422,7 +441,7 @@ export const sections: Section[] = [
       },
       {
         title: "Mercado de San Telmo",
-        image: "/images/listings/san-telmo.jpg",
+        image: "/images/listings/mercado-san-telmo.jpg",
         address: "Defensa 961, San Telmo",
         mapsQuery: "Mercado de San Telmo Defensa",
         description: {
@@ -517,6 +536,20 @@ export const sections: Section[] = [
         },
       },
       {
+        title: "Buenos Aires Bus — Hop on / Hop off",
+        image: "/images/listings/bus-turistico.jpg",
+        mapsQuery: "Buenos Aires Bus parada Puerto Madero",
+        proximity: { es: "Parada a 100 metros", en: "Stop 100m away", pt: "Parada a 100 metros" },
+        description: {
+          es: "Bus turístico con parada a metros del edificio. Recorrido por los principales atractivos de Buenos Aires con audioguía.",
+          en: "Sightseeing bus with a stop just meters from the building. Routes through Buenos Aires' main attractions with audio guide.",
+          pt: "Ônibus turístico com parada a metros do edifício. Roteiro pelos principais pontos turísticos de Buenos Aires com audioguia.",
+        },
+        links: [
+          { label: "Recorrido y tickets", url: "https://www.buenosairesbus.com/" },
+        ],
+      },
+      {
         title: "Aeroparque (AEP)",
         image: "/images/listings/aeroparque.jpeg",
         description: {
@@ -579,12 +612,13 @@ export const sections: Section[] = [
       },
       {
         title: "Mercado de San Telmo",
-        image: "/images/listings/san-telmo.jpg",
+        image: "/images/listings/mercado-san-telmo.jpg",
+        address: "Defensa 961, San Telmo",
         mapsQuery: "Mercado de San Telmo",
         description: {
-          es: "Mercado histórico de 1897. Anticuarios, puestos de comida y la feria de los domingos sobre Defensa.",
-          en: "A historic market from 1897. Antique dealers, food stalls and the Sunday fair along Defensa street.",
-          pt: "Mercado histórico de 1897. Antiquários, bancas de comida e a feira de domingo pela rua Defensa.",
+          es: "Mercado histórico de 1897. Anticuarios, puestos de comida, carnicerías y la feria de los domingos sobre Defensa.",
+          en: "A historic market from 1897. Antique dealers, food stalls, butchers and the Sunday fair along Defensa street.",
+          pt: "Mercado histórico de 1897. Antiquários, bancas de comida, açougues e a feira de domingo pela rua Defensa.",
         },
       },
       {
@@ -627,6 +661,50 @@ export const sections: Section[] = [
           pt: "Museu de Arte Latino-Americana de Buenos Aires. Obras de Frida Kahlo, Xul Solar, Berni e mostras temporárias.",
         },
       },
+      {
+        title: "Museo Nacional de Bellas Artes",
+        image: "/images/listings/bellas-artes.jpg",
+        address: "Av. del Libertador 1473, Recoleta",
+        mapsQuery: "Museo Nacional de Bellas Artes Buenos Aires",
+        description: {
+          es: "El museo de arte más importante de Argentina. Obras de Goya, Rodin, Monet, Pettoruti y Quinquela Martín. Entrada gratuita.",
+          en: "Argentina's most important art museum. Works by Goya, Rodin, Monet, Pettoruti and Quinquela Martín. Free admission.",
+          pt: "O museu de arte mais importante da Argentina. Obras de Goya, Rodin, Monet, Pettoruti e Quinquela Martín. Entrada gratuita.",
+        },
+      },
+      {
+        title: "Museo de Arte Moderno",
+        image: "/images/listings/arte-moderno.jpg",
+        address: "Av. San Juan 350, San Telmo",
+        mapsQuery: "Museo de Arte Moderno Buenos Aires San Telmo",
+        description: {
+          es: "Arte argentino contemporáneo en un edificio industrial reciclado. Exposiciones rotativas de artistas locales e internacionales.",
+          en: "Contemporary Argentine art in a converted industrial building. Rotating exhibitions of local and international artists.",
+          pt: "Arte argentina contemporânea em edifício industrial reciclado. Exposições rotativas de artistas locais e internacionais.",
+        },
+      },
+      {
+        title: "Fundación Proa",
+        image: "/images/listings/fundacion-proa.jpg",
+        address: "Av. Pedro de Mendoza 1929, La Boca",
+        mapsQuery: "Fundación Proa La Boca Buenos Aires",
+        description: {
+          es: "Centro de arte contemporáneo en La Boca con exhibiciones internacionales de primer nivel. Terraza con vista al Riachuelo.",
+          en: "Contemporary art center in La Boca with world-class international exhibitions. Rooftop terrace overlooking the Riachuelo.",
+          pt: "Centro de arte contemporânea em La Boca com exposições internacionais de alto nível. Terraço com vista ao Riachuelo.",
+        },
+      },
+      {
+        title: "Usina del Arte",
+        image: "/images/listings/usina-del-arte.jpg",
+        address: "Agustín R. Caffarena 1, La Boca",
+        mapsQuery: "Usina del Arte La Boca Buenos Aires",
+        description: {
+          es: "Centro cultural en una usina eléctrica restaurada de 1916. Conciertos, ópera, teatro y muestras de arte. Arquitectura espectacular.",
+          en: "Cultural center in a restored 1916 power plant. Concerts, opera, theater and art shows. Spectacular architecture.",
+          pt: "Centro cultural numa usina elétrica restaurada de 1916. Concertos, ópera, teatro e mostras de arte. Arquitetura espetacular.",
+        },
+      },
     ],
   },
 
@@ -650,17 +728,24 @@ export const sections: Section[] = [
           en: "Premium seats for River Plate and Argentina national team matches at the Monumental Stadium.",
           pt: "Ingressos em tribunas com ótimas localizações para jogos do River e da Seleção Argentina no Estádio Monumental.",
         },
+        links: [
+          { label: "Instagram", url: "https://instagram.com/riverplate_experience" },
+          { label: "WhatsApp", url: "https://wa.me/541124770482?text=Consulta%20desde%20Guidr" },
+        ],
       },
       {
-        title: "La Bombonera — Tour",
+        title: "La Bombonera — Museo de la Pasión Boquense",
         image: "/images/listings/bombonera.jpg",
         address: "Brandsen 805, La Boca",
-        mapsQuery: "La Bombonera Boca Juniors",
+        mapsQuery: "Museo de la Pasión Boquense La Boca",
         description: {
           es: "Visita guiada al mítico estadio de Boca Juniors. Incluye Museo de la Pasión Boquense y acceso a la cancha.",
           en: "Guided tour of Boca Juniors' legendary stadium. Includes the Pasión Boquense museum and pitch access.",
           pt: "Visita guiada ao lendário estádio do Boca Juniors. Inclui o Museu da Pasión Boquense e acesso ao campo.",
         },
+        links: [
+          { label: "Museo Boquense", url: "https://www.museoboquense.com/" },
+        ],
       },
       {
         title: "Museo River",
@@ -671,6 +756,9 @@ export const sections: Section[] = [
           en: "Tour of the Monumental Stadium with club history, locker rooms and pitch access.",
           pt: "Tour pelo Estádio Monumental com história do clube, vestiários e acesso ao campo.",
         },
+        links: [
+          { label: "Museo River", url: "https://www.cariverplate.com.ar/museo" },
+        ],
       },
     ],
   },

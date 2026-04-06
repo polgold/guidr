@@ -155,9 +155,10 @@ function ItemCard({ item, locale }: { item: SectionItem; locale: Locale }) {
       >
         {ImageArea}
         <div className="flex flex-1 flex-col pt-6">
-          {(item.address || item.hours) && (
+          {(item.address || item.hours || item.proximity) && (
             <div className="mb-2 flex flex-wrap gap-x-3 text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--accent)]">
-              {item.address && <span>{item.address}</span>}
+              {item.proximity && <span>{item.proximity[locale]}</span>}
+              {item.address && <span>{item.proximity ? "·" : ""} {item.address}</span>}
               {item.hours && <span>· {item.hours}</span>}
             </div>
           )}
