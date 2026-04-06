@@ -249,7 +249,8 @@ export const sections: Section[] = [
     items: [
       {
         title: "La Puerta Roja",
-        image: "/images/listings/puerta-roja-photo.jpg",
+        image: "/images/listings/puerta-roja.png",
+        imageKind: "logo",
         address: "Chacabuco 733, San Telmo",
         mapsQuery: "La Puerta Roja San Telmo",
         description: {
