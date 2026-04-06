@@ -202,9 +202,9 @@ function ItemCard({ item, locale }: { item: SectionItem; locale: Locale }) {
               {t(locale, "call")} · {item.phone}
             </a>
           )}
-          {item.mapsQuery && (
+          {(item.mapsUrl || item.mapsQuery) && (
             <a
-              href={mapsUrl(item.mapsQuery)}
+              href={item.mapsUrl ?? mapsUrl(item.mapsQuery!)}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-[color:var(--ink)] transition-colors hover:text-[color:var(--brand)]"

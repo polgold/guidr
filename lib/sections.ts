@@ -19,6 +19,7 @@ export type SectionItem = {
   phone?: string; // E.164 without + for tel: links
   address?: string;
   mapsQuery?: string; // used to build a Google Maps search link
+  mapsUrl?: string; // direct Google Maps URL (overrides mapsQuery)
   hours?: string;
   proximity?: LocalizedText; // "Walking distance" or "A 100m" etc.
   links?: { label: string; url: string }[]; // app stores, external links
@@ -204,7 +205,7 @@ export const sections: Section[] = [
         title: "La Parolaccia del Mare",
         image: "/images/listings/la-parolaccia.jpg",
         address: "Av. Alicia Moreau de Justo 1052, Puerto Madero",
-        mapsQuery: "La Parolaccia del Mare Puerto Madero",
+        mapsUrl: "https://maps.app.goo.gl/84T3ME8zSEPiMKss9",
         proximity: { es: "A 10 min caminando", en: "10 min walk", pt: "A 10 min caminhando" },
         description: {
           es: "Cocina italiana con protagonismo de pastas caseras y frutos de mar. Ambiente refinado frente al dique con vista panorámica.",
@@ -234,6 +235,27 @@ export const sections: Section[] = [
           pt: "Restaurante clássico de cozinha espanhola, com tradição, pratos fartos e ambiente familiar há décadas.",
         },
       },
+      {
+        title: "El Refuerzo",
+        image: "/images/listings/el-refuerzo.jpg",
+        mapsUrl: "https://maps.app.goo.gl/JNHaTVYnLrbo1U7Z9",
+        description: {
+          es: "Bodegón porteño clásico con cocina casera, porciones abundantes y precios accesibles. El espíritu del barrio en cada plato.",
+          en: "A classic Buenos Aires bodegón with home cooking, generous portions and affordable prices. Neighborhood spirit in every dish.",
+          pt: "Bodegón portenho clássico com cozinha caseira, porções fartas e preços acessíveis. O espírito do bairro em cada prato.",
+        },
+      },
+      {
+        title: "Cafe San Juan",
+        image: "/images/listings/cafe-san-juan.jpg",
+        address: "Av. San Juan 450, San Telmo",
+        mapsUrl: "https://maps.app.goo.gl/TxRYNFcUFkA16qXk8",
+        description: {
+          es: "Cocina de autor en San Telmo. Platos creativos con productos frescos, ambiente cálido y carta de vinos cuidada.",
+          en: "Creative cuisine in San Telmo. Inventive dishes with fresh produce, warm atmosphere and a curated wine list.",
+          pt: "Cozinha autoral em San Telmo. Pratos criativos com produtos frescos, ambiente acolhedor e carta de vinhos cuidada.",
+        },
+      },
     ],
   },
 
@@ -247,6 +269,62 @@ export const sections: Section[] = [
       pt: "Bares históricos e coquetelarias perto de San Telmo e Puerto Madero.",
     },
     items: [
+      {
+        title: "Bar Británico",
+        image: "/images/listings/bar-britanico.jpg",
+        address: "Defensa 399, San Telmo",
+        mapsUrl: "https://maps.app.goo.gl/MQcgUN4N3mbe5kMa8",
+        description: {
+          es: "Bar notable frente al Parque Lezama, abierto desde 1928. Café, medialunas y el alma de San Telmo en cada rincón.",
+          en: "A heritage-listed bar facing Parque Lezama, open since 1928. Coffee, croissants and the soul of San Telmo in every corner.",
+          pt: "Bar notável em frente ao Parque Lezama, aberto desde 1928. Café, medialunas e a alma de San Telmo em cada canto.",
+        },
+      },
+      {
+        title: "Hipopótamo",
+        image: "/images/listings/hipopotamo.jpg",
+        mapsUrl: "https://maps.app.goo.gl/5SqLezLK8DmPib1x7",
+        description: {
+          es: "Bar clásico porteño con décadas de historia. Cócteles, picadas y un ambiente que combina tradición con vida nocturna.",
+          en: "A classic Buenos Aires bar with decades of history. Cocktails, shared plates and a mix of tradition and nightlife.",
+          pt: "Bar clássico portenho com décadas de história. Coquetéis, petiscos e um ambiente que mistura tradição com vida noturna.",
+        },
+      },
+      {
+        title: "Temple Craft Madero",
+        image: "/images/listings/temple-craft.jpg",
+        address: "Puerto Madero",
+        mapsUrl: "https://maps.app.goo.gl/8n9kiLxKEwGrCcEG6",
+        proximity: { es: "A 5 min caminando", en: "5 min walk", pt: "A 5 min caminhando" },
+        description: {
+          es: "Cervecería artesanal en Puerto Madero con amplia variedad de cervezas locales, buena comida y vista al dique.",
+          en: "Craft brewery in Puerto Madero with a wide range of local beers, good food and dock views.",
+          pt: "Cervejaria artesanal em Puerto Madero com ampla variedade de cervejas locais, boa comida e vista ao dique.",
+        },
+      },
+      {
+        title: "Havanna Madero Eye",
+        image: "/images/listings/havanna-madero.jpg",
+        address: "Puerto Madero",
+        mapsUrl: "https://maps.app.goo.gl/VJmVxowZrvtXwGzb6",
+        proximity: { es: "A 3 min caminando", en: "3 min walk", pt: "A 3 min caminhando" },
+        description: {
+          es: "Café y alfajores premium con vista al dique. Ideal para un café, merienda o llevar alfajores Havanna de regalo.",
+          en: "Premium café and alfajores with dock views. Perfect for coffee, afternoon tea or taking home Havanna alfajores as gifts.",
+          pt: "Café e alfajores premium com vista ao dique. Ideal para café, lanche ou levar alfajores Havanna de presente.",
+        },
+      },
+      {
+        title: "Café Martínez",
+        image: "/images/listings/cafe-martinez.jpg",
+        mapsUrl: "https://maps.app.goo.gl/MQELgH44Df8skDyW6",
+        proximity: { es: "A 2 min caminando", en: "2 min walk", pt: "A 2 min caminhando" },
+        description: {
+          es: "Cadena de cafeterías argentinas con buen café, medialunas y opciones para desayuno o merienda rápida.",
+          en: "Argentine coffee chain with good coffee, croissants and options for a quick breakfast or afternoon snack.",
+          pt: "Rede de cafeterias argentinas com bom café, medialunas e opções para café da manhã ou lanche rápido.",
+        },
+      },
       {
         title: "La Puerta Roja",
         image: "/images/listings/puerta-roja.png",
@@ -271,17 +349,6 @@ export const sections: Section[] = [
         },
       },
       {
-        title: "Bar Plaza Dorrego",
-        image: "https://images.pexels.com/photos/14201458/pexels-photo-14201458.jpeg?auto=compress&cs=tinysrgb&w=800",
-        address: "Defensa 1098, San Telmo",
-        mapsQuery: "Bar Plaza Dorrego San Telmo",
-        description: {
-          es: "Bar notable frente a la Plaza Dorrego. Piso original, barra antigua y el latido de la feria dominical.",
-          en: "A heritage-listed bar facing Plaza Dorrego. Original floors, an old-school bar and the pulse of the Sunday fair.",
-          pt: "Bar notável em frente à Plaza Dorrego. Piso original, balcão antigo e o pulso da feira de domingo.",
-        },
-      },
-      {
         title: "Bar Sur",
         image: "/images/listings/bar-sur.jpg",
         address: "Estados Unidos 299, San Telmo",
@@ -290,28 +357,6 @@ export const sections: Section[] = [
           es: "Histórico bar con shows de tango en vivo. Pequeño, íntimo y con la esencia del arrabal porteño.",
           en: "A historic bar with live tango shows. Small, intimate, and full of the spirit of old Buenos Aires.",
           pt: "Bar histórico com shows de tango ao vivo. Pequeno, íntimo e com a essência do velho arrabalde portenho.",
-        },
-      },
-      {
-        title: "Boticario",
-        image: "https://images.pexels.com/photos/17651216/pexels-photo-17651216.jpeg?auto=compress&cs=tinysrgb&w=800",
-        address: "Venezuela 1413, Monserrat",
-        mapsQuery: "Boticario bar Buenos Aires",
-        description: {
-          es: "Cocktail bar con estética de farmacia antigua. Cócteles creativos en un ambiente de elegancia oscura.",
-          en: "A cocktail bar with an old apothecary aesthetic. Creative drinks in a darkly elegant setting.",
-          pt: "Coquetelaria com estética de farmácia antiga. Coquetéis criativos em ambiente de elegância sombria.",
-        },
-      },
-      {
-        title: "Gran Bar Danzón",
-        image: "https://images.pexels.com/photos/17864107/pexels-photo-17864107.jpeg?auto=compress&cs=tinysrgb&w=800",
-        address: "Libertad 1161, Recoleta",
-        mapsQuery: "Gran Bar Danzón Buenos Aires",
-        description: {
-          es: "Wine bar de referencia en la ciudad. Amplia carta de vinos argentinos, cocina sofisticada y coctelería.",
-          en: "A benchmark wine bar in the city. A broad selection of Argentine wines, sophisticated food and cocktails.",
-          pt: "Wine bar de referência na cidade. Ampla carta de vinhos argentinos, cozinha sofisticada e coquetéis.",
         },
       },
     ],
@@ -328,59 +373,24 @@ export const sections: Section[] = [
     },
     items: [
       {
-        title: "Farmacity Puerto Madero",
-        image: "/images/listings/farmacity.jpg",
-        address: "Av. Alicia Moreau de Justo 240",
-        hours: "24 hs",
-        mapsQuery: "Farmacity Puerto Madero Alicia Moreau de Justo",
+        title: "Farmacity — Puerto Madero",
+        image: "/images/listings/farmacity-1.jpg",
+        mapsUrl: "https://maps.app.goo.gl/Goo7FhAQCRBgntFw8",
+        proximity: { es: "A 5 min caminando", en: "5 min walk", pt: "A 5 min caminhando" },
         description: {
-          es: "Farmacia 24 hs a pocas cuadras del departamento. Medicamentos, perfumería y artículos esenciales.",
-          en: "24-hour pharmacy a few blocks from the apartment. Medicine, toiletries and essentials.",
-          pt: "Farmácia 24 hs a poucas quadras do apartamento. Medicamentos, perfumaria e artigos essenciais.",
+          es: "Farmacia con horario extendido cerca del departamento. Medicamentos, perfumería y artículos esenciales.",
+          en: "Pharmacy with extended hours near the apartment. Medicine, toiletries and essentials.",
+          pt: "Farmácia com horário estendido perto do apartamento. Medicamentos, perfumaria e artigos essenciais.",
         },
       },
       {
-        title: "Farmacity San Telmo",
-        image: "/images/listings/farmacity.jpg",
-        address: "Av. Paseo Colón 255",
-        mapsQuery: "Farmacity Paseo Colón San Telmo",
+        title: "Farmacity — San Telmo",
+        image: "/images/listings/farmacity-2.jpg",
+        mapsUrl: "https://maps.app.goo.gl/otbDbZVjXWySfJHD9",
         description: {
-          es: "Sucursal amplia con atención extendida. Ideal para visitas rápidas y medicamentos de venta libre.",
-          en: "A large branch with extended hours. Ideal for quick visits and over-the-counter medication.",
-          pt: "Filial ampla com horário estendido. Ideal para visitas rápidas e medicamentos de venda livre.",
-        },
-      },
-      {
-        title: "Farmacity Monserrat",
-        image: "/images/listings/farmacity.jpg",
-        address: "Av. Belgrano 499",
-        mapsQuery: "Farmacity Belgrano Monserrat",
-        description: {
-          es: "En pleno centro histórico. Horario extendido y amplio stock.",
-          en: "In the heart of the historic center. Extended hours and wide stock.",
-          pt: "No centro histórico. Horário estendido e amplo estoque.",
-        },
-      },
-      {
-        title: "Dr. Ahorro",
-        image: "/images/listings/farmacity.jpg",
-        address: "Av. Independencia 1600",
-        mapsQuery: "Dr. Ahorro Independencia Buenos Aires",
-        description: {
-          es: "Precios económicos y buena disponibilidad de medicamentos de uso común.",
-          en: "Budget-friendly prices and good availability of common medicines.",
-          pt: "Preços econômicos e boa disponibilidade de medicamentos de uso comum.",
-        },
-      },
-      {
-        title: "Farmacia Suizo Argentina",
-        image: "/images/listings/farmacity.jpg",
-        address: "Chacabuco 402, San Telmo",
-        mapsQuery: "Farmacia Suizo Argentina San Telmo",
-        description: {
-          es: "Farmacia clásica de barrio, atención personalizada.",
-          en: "A classic neighborhood pharmacy with personalized service.",
-          pt: "Farmácia clássica de bairro, atendimento personalizado.",
+          es: "Sucursal amplia en San Telmo. Ideal para visitas rápidas y medicamentos de venta libre.",
+          en: "A large branch in San Telmo. Ideal for quick visits and over-the-counter medication.",
+          pt: "Filial ampla em San Telmo. Ideal para visitas rápidas e medicamentos de venda livre.",
         },
       },
     ],
@@ -400,7 +410,7 @@ export const sections: Section[] = [
         title: "Carrefour Express Puerto Madero",
         image: "/images/listings/carrefour.jpg",
         address: "Puerto Madero",
-        mapsQuery: "Carrefour Express Puerto Madero",
+        mapsUrl: "https://maps.app.goo.gl/khUX2rRjCYyputiX8",
         description: {
           es: "Formato de cercanía, ideal para compras rápidas.",
           en: "A small-format store, ideal for quick shopping.",
@@ -422,7 +432,7 @@ export const sections: Section[] = [
         title: "Carrefour Perú",
         image: "/images/listings/carrefour.jpg",
         address: "Perú 900, San Telmo",
-        mapsQuery: "Carrefour Perú San Telmo",
+        mapsUrl: "https://maps.app.goo.gl/wJkedbVCJKEAWx9q6",
         description: {
           es: "Supermercado del centro histórico, con todo lo básico.",
           en: "Supermarket in the historic center, with all the basics.",
@@ -584,7 +594,7 @@ export const sections: Section[] = [
       {
         title: "Plaza de Mayo & Casa Rosada",
         image: "/images/listings/casa-rosada.jpg",
-        mapsQuery: "Plaza de Mayo Buenos Aires",
+        mapsUrl: "https://maps.app.goo.gl/BoP3ASFnCqQnYQe1A",
         description: {
           es: "El corazón histórico y político de la Argentina. Casa Rosada, Catedral y Cabildo alrededor de la plaza.",
           en: "Argentina's historic and political heart. Casa Rosada, Cathedral and Cabildo around the square.",
@@ -704,6 +714,17 @@ export const sections: Section[] = [
           es: "Centro cultural en una usina eléctrica restaurada de 1916. Conciertos, ópera, teatro y muestras de arte. Arquitectura espectacular.",
           en: "Cultural center in a restored 1916 power plant. Concerts, opera, theater and art shows. Spectacular architecture.",
           pt: "Centro cultural numa usina elétrica restaurada de 1916. Concertos, ópera, teatro e mostras de arte. Arquitetura espetacular.",
+        },
+      },
+      {
+        title: "Parque Lezama",
+        image: "/images/listings/parque-lezama.jpg",
+        address: "Defensa y Brasil, San Telmo",
+        mapsUrl: "https://maps.app.goo.gl/pqgxXFDNLtVkWQ6L8",
+        description: {
+          es: "Parque histórico en la frontera de San Telmo y La Boca. Monumento a Pedro de Mendoza, Museo Histórico Nacional y feria los fines de semana.",
+          en: "A historic park on the border of San Telmo and La Boca. Pedro de Mendoza monument, National Historical Museum and weekend fairs.",
+          pt: "Parque histórico na fronteira de San Telmo e La Boca. Monumento a Pedro de Mendoza, Museu Histórico Nacional e feira nos fins de semana.",
         },
       },
     ],
