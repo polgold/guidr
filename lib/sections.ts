@@ -174,8 +174,7 @@ export const sections: Section[] = [
       },
       {
         title: "La Veneciana",
-        image: "/images/listings/la-veneciana.jpg",
-        imageKind: "logo",
+        image: "/images/listings/la-veneciana-photo.jpg",
         mapsQuery: "La Veneciana heladería Buenos Aires",
         description: {
           es: "Heladería tradicional emblema de la herencia italiana en Buenos Aires. Sabores clásicos y cremas artesanales.",
@@ -463,7 +462,7 @@ export const sections: Section[] = [
           pt: "6 linhas (A, B, C, D, E e H) conectando o centro aos bairros. Pague com o cartão SUBE.",
         },
         links: [
-          { label: "Mapa oficial", url: "https://www.buenosaires.gob.ar/subte/mapa-de-la-red" },
+          { label: "Mapa oficial", url: "https://buenosaires.gob.ar/gcaba_historico/subte/mapa-del-subte-y-combinaciones" },
         ],
       },
       {
@@ -496,7 +495,8 @@ export const sections: Section[] = [
       },
       {
         title: "Cabify",
-        image: "/images/listings/taxi-ba.jpg",
+        image: "/images/listings/cabify-logo.png",
+        imageKind: "logo",
         description: {
           es: "App de movilidad con vehículos de alta gama. Servicio profesional y tarifa cerrada antes de viajar.",
           en: "Ride-hailing app with premium vehicles. Professional service and fixed fare before your trip.",
