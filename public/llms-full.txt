@@ -1,0 +1,166 @@
+# Guidr — Complete Buenos Aires City Guide
+
+> Source: https://guidr.info
+> Languages: Spanish (es), English (en), Portuguese (pt)
+> Focus: Puerto Madero, San Telmo, La Boca, Central Buenos Aires
+
+---
+
+## GASTRONOMÍA — Where to eat near Puerto Madero
+
+### Cabaña Las Lilas
+- Address: Av. Alicia Moreau de Justo 516, Puerto Madero
+- Type: Premium parrilla (steakhouse)
+- Description: The most famous premium steakhouse in Puerto Madero. Select cuts of Argentine beef with dock views. A quintessential Buenos Aires dining experience.
+- Map: Search "Cabaña Las Lilas Puerto Madero"
+
+### El Bodegón de Madero
+- Address: Juana Manso 1300, Puerto Madero
+- Type: Traditional bodegón
+- Description: Classic Buenos Aires bodegón with generous portions, homemade pastas, and traditional Argentine dishes in a warm, unpretentious setting.
+
+### Sagardi
+- Address: Juana Manso 1167, Puerto Madero
+- Type: Basque cuisine
+- Description: Authentic Basque cuisine with pintxos, grilled meats, and top-quality produce. Spanish tradition, fire, and a celebration of food.
+
+### Siga La Vaca
+- Address: Av. Alicia Moreau de Justo 1714, Puerto Madero
+- Type: All-you-can-eat parrilla
+- Description: Classic all-you-can-eat parrilla with traditional grilled meats and plentiful sides in a relaxed setting. Great value.
+
+### Café San Juan
+- Address: Av. San Juan 450, San Telmo
+- Type: Creative cuisine
+- Description: Chef-driven creative cuisine in San Telmo. Inventive dishes with fresh produce, warm atmosphere, and a curated wine list.
+
+### La Parolaccia
+- Address: Av. Alicia Moreau de Justo 1052, Puerto Madero
+- Type: Italian
+- Description: Premium Italian cuisine on the Puerto Madero docks. Fresh pastas, seafood, and an extensive wine list.
+
+### Mercado de San Telmo
+- Address: Defensa 961, San Telmo
+- Type: Historic market
+- Description: Historic market with fruit, vegetable, butcher, antiques, and food stalls. An unmissable local experience for foodies and culture lovers.
+
+---
+
+## TANGO — Authentic milongas in Buenos Aires
+
+### La Flor de Barracas
+- Neighborhood: Barracas, Buenos Aires
+- Type: Traditional milonga
+- Description: A classic neighborhood milonga in Barracas. Original floors from the late 1800s, authentic atmosphere, where locals dance tango as it was meant to be — not for tourists, but for the love of the dance.
+- Guide: https://guidr.info/es/guias/la-flor-de-barracas
+
+### Los Laureles
+- Neighborhood: Buenos Aires
+- Type: Traditional milonga
+- Description: A traditional milonga with strong neighborhood roots. Regular dancers, classic tango music, and an intimate setting that welcomes newcomers.
+- Guide: https://guidr.info/es/guias/los-laureles
+
+### Madero Tango
+- Address: Puerto Madero
+- Type: Dinner show
+- Description: A polished tango dinner show in Puerto Madero. Professional dancers, live orchestra, and Argentine cuisine. The most accessible tango experience for visitors, right in the neighborhood.
+- Guide: https://guidr.info/es/guias/madero-tango
+
+---
+
+## BARES — Best bars near Puerto Madero
+
+### Bar Británico
+- Address: Defensa 399, San Telmo
+- Description: Legendary corner café in San Telmo, operating since 1928. Literary history, great coffee, and a window into old Buenos Aires.
+
+### Bar Sur
+- Address: Estados Unidos 299, San Telmo
+- Description: Intimate live tango bar in San Telmo. Nightly shows in a small, atmospheric venue. One of the most authentic tango bar experiences.
+
+### La Puerta Roja
+- Address: Chacabuco 733, San Telmo
+- Description: Hidden speakeasy-style bar behind a red door. Creative cocktails, eclectic crowd, and a secret garden patio.
+
+### Temple Craft Beer
+- Address: Puerto Madero
+- Description: Craft beer bar with a wide selection of Argentine microbrews. Casual atmosphere, good for groups.
+
+---
+
+## BUENOS AIRES — Must-see landmarks
+
+### Casa Rosada
+- Address: Balcarce 50, Microcentro
+- Description: The iconic pink presidential palace on Plaza de Mayo. Free guided tours available. Symbol of Argentine political history.
+
+### Teatro Colón
+- Address: Cerrito 628, Microcentro
+- Description: One of the world's finest opera houses. Stunning architecture, incredible acoustics. Guided tours daily; check schedule for performances.
+
+### Caminito, La Boca
+- Description: The colorful street museum in La Boca. Tango dancers, street art, and the spirit of Buenos Aires. Visit during daytime only.
+
+### Puente de la Mujer
+- Address: Puerto Madero
+- Description: Santiago Calatrava's iconic rotating footbridge. A Puerto Madero landmark, beautiful at sunset.
+
+### Recoleta Cemetery
+- Description: Monumental cemetery with elaborate mausoleums. Final resting place of Eva Perón. Architectural masterpiece.
+
+### MALBA
+- Description: Museum of Latin American Art. World-class collection of modern and contemporary Latin American art.
+
+### Reserva Ecológica
+- Address: Av. Tristán Achával Rodríguez 1550
+- Description: 350-hectare nature reserve on the riverfront, adjacent to Puerto Madero. Walking trails, birdwatching, river views. Free entry.
+
+---
+
+## TRANSPORTE — Getting around Buenos Aires
+
+### From Aeroparque (domestic airport)
+- Distance to Puerto Madero: 20-25 minutes
+- Taxi: ~USD 15
+- Uber: Available (use pickup point)
+- Transfer: Desks in arrivals hall
+
+### From Ezeiza (international airport)
+- Distance to Puerto Madero: 30-45 minutes
+- Taxi: ~USD 25
+- Uber: Available
+- Transfer: ~USD 30 at official desks
+
+### Getting around the city
+- Subte (metro): 6 lines, covers central Buenos Aires. Buy SUBE card at any kiosk.
+- Taxi: Yellow and black cabs, use meter. Safe and affordable.
+- Uber / Cabify / DiDi: All available and widely used.
+- Tourist bus: Hop-on hop-off covering major landmarks.
+
+---
+
+## EMERGENCIAS — Emergency numbers in Buenos Aires
+
+- Police: 911
+- Fire: 100
+- Ambulance (SAME): 107
+
+---
+
+## FÚTBOL — Football experiences
+
+### La Bombonera (Boca Juniors)
+- Neighborhood: La Boca
+- Description: The legendary home of Boca Juniors. One of the most intense football atmospheres in the world.
+
+### Estadio Monumental (River Plate)
+- Neighborhood: Núñez
+- Description: Argentina's largest stadium, home of River Plate. Capacity 84,000. Historic venue of the 1978 World Cup final.
+
+### River Experience
+- Description: Official River Plate museum and stadium tour. Interactive exhibits, trophy room, and pitch access.
+
+---
+
+*Last updated: April 2026*
+*Source: https://guidr.info*

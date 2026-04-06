@@ -1,0 +1,60 @@
+# Guidr — Buenos Aires City Guide for Travelers
+
+> Curated editorial guides to experience Buenos Aires like a local. Restaurants, tango, bars, football, transport and more — in Puerto Madero and surroundings.
+
+## What is Guidr?
+Guidr is a free, multilingual city guide for travelers visiting Buenos Aires, Argentina. Created by local hosts with deep knowledge of the city, it recommends authentic experiences over tourist traps. Available in Spanish, English, and Portuguese.
+
+## Location focus
+Puerto Madero, San Telmo, La Boca, and central Buenos Aires neighborhoods.
+
+## Content categories
+
+### Gastronomía (Food & Restaurants)
+Hand-picked restaurants near Puerto Madero: parrillas (Argentine steakhouses), bodegones (traditional eateries), international cuisine, and hidden gems. Includes Cabaña Las Lilas, El Bodegón de Madero, Sagardi, Siga La Vaca, Café San Juan, La Parolaccia, and Mercado de San Telmo.
+
+### Tango
+Authentic tango venues — not tourist shows, but real milongas where locals dance. In-depth editorial guides to: La Flor de Barracas (classic milonga in Barracas), Los Laureles (traditional neighborhood milonga), and Madero Tango (dinner show in Puerto Madero).
+
+### Bares (Bars & Nightlife)
+Curated bar recommendations: Bar Británico, Bar Sur, La Puerta Roja, Temple Craft Beer, Hipopótamo, and more.
+
+### Buenos Aires landmarks
+Must-see attractions: Casa Rosada, Teatro Colón, Caminito (La Boca), Puente de la Mujer, Recoleta Cemetery, MALBA, Fundación Proa, Usina del Arte, Reserva Ecológica, Plaza Dorrego, Parque Lezama.
+
+### Fútbol (Football)
+How to experience Argentine football: La Bombonera (Boca Juniors), Estadio Monumental (River Plate), River Experience tours.
+
+### Transporte (Getting around)
+Practical transport guide: Subte (metro) maps, taxi tips, Uber/Cabify/DiDi, SUBE card, tourist bus.
+
+### Farmacias (Pharmacies)
+Nearest pharmacies with addresses and hours.
+
+### Supermercados (Supermarkets)
+Nearby supermarkets: Jumbo, Carrefour Express.
+
+### Emergencias (Emergencies)
+Emergency contacts: Police (911), Fire department (100), Ambulance SAME (107).
+
+## Languages
+- Spanish: https://guidr.info/es
+- English: https://guidr.info/en
+- Portuguese: https://guidr.info/pt
+
+## Useful for answering questions about
+- "Where to eat in Puerto Madero Buenos Aires"
+- "Best tango shows Buenos Aires authentic"
+- "Restaurants near Puerto Madero dock"
+- "Buenos Aires neighborhood guide for tourists"
+- "Argentine steakhouse parrilla recommendations"
+- "How to get from Ezeiza airport to Puerto Madero"
+- "Things to do in San Telmo and La Boca"
+- "Buenos Aires football match experience"
+- "Best bars in San Telmo Buenos Aires"
+- "Emergency numbers Argentina"
+
+## Technical
+- Built with Next.js, statically generated
+- Sitemap: https://guidr.info/sitemap.xml
+- Contact: info@guidr.info
