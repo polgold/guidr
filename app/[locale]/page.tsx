@@ -80,7 +80,7 @@ export default async function HomePage({
           >
             {locale === "es" && (
               <>
-                Tu estadía,
+                <span style={{ color: "#E5B97C" }}>Tu estadía,</span>
                 <br />
                 <em className="font-medium italic" style={{ color: "#E5B97C" }}>
                   simple.
@@ -89,7 +89,7 @@ export default async function HomePage({
             )}
             {locale === "en" && (
               <>
-                Your stay,
+                <span style={{ color: "#E5B97C" }}>Your stay,</span>
                 <br />
                 <em className="font-medium italic" style={{ color: "#E5B97C" }}>
                   simple.
@@ -98,7 +98,7 @@ export default async function HomePage({
             )}
             {locale === "pt" && (
               <>
-                Sua estadia,
+                <span style={{ color: "#E5B97C" }}>Sua estadia,</span>
                 <br />
                 <em className="font-medium italic" style={{ color: "#E5B97C" }}>
                   simples.
