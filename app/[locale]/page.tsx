@@ -140,9 +140,12 @@ export default async function HomePage({
         </div>
 
         {/* Scroll cue */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/80">
+        <a
+          href="#gastronomia"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] font-semibold uppercase tracking-[0.3em] text-white/80 transition-colors hover:text-white animate-bounce"
+        >
           ↓ {locale === "es" ? "Desplazar" : locale === "pt" ? "Rolar" : "Scroll"}
-        </div>
+        </a>
       </section>
 
       {/* Intro strip */}

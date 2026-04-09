@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { isLocale, locales, type Locale } from "@/lib/i18n";
 import { getProperty, listPropertyIds } from "@/lib/properties";
@@ -171,6 +172,18 @@ export default async function PropertyPage({
 
   return (
     <div className="min-h-screen bg-white">
+
+      {/* ════════════════════════════════════════════
+          TOP BAR / LOGO
+          ════════════════════════════════════════════ */}
+      <div className="absolute top-0 left-0 right-0 z-10 px-6 py-5 lg:px-10">
+        <Link
+          href={`/${l}`}
+          className="font-[family-name:var(--font-fraunces)] text-2xl font-medium italic tracking-tight text-white drop-shadow-lg"
+        >
+          Guidr<span className="text-[color:var(--accent)]">.</span>
+        </Link>
+      </div>
 
       {/* ════════════════════════════════════════════
           HERO
@@ -568,12 +581,49 @@ export default async function PropertyPage({
         </div>
       </section>
 
+      {/* ════════════════════════════════════════════
+          GUIDE CTA
+          ════════════════════════════════════════════ */}
+      <section className="bg-[color:var(--bg-alt)] px-6 py-16 sm:py-20">
+        <div className="mx-auto max-w-2xl text-center">
+          <span className="mb-4 block text-4xl">🗺️</span>
+          <h2 className="font-[family-name:var(--font-fraunces)] text-2xl font-medium text-[color:var(--ink)] sm:text-3xl">
+            {l === "es"
+              ? "Descubrí nuestra guía de Buenos Aires"
+              : l === "pt"
+                ? "Descubra nosso guia de Buenos Aires"
+                : "Discover our Buenos Aires guide"}
+          </h2>
+          <p className="mx-auto mt-3 max-w-lg text-sm leading-relaxed text-[color:var(--ink-soft)]">
+            {l === "es"
+              ? "Restaurantes, bares, tango, transporte y todo lo que necesitás para disfrutar la ciudad."
+              : l === "pt"
+                ? "Restaurantes, bares, tango, transporte e tudo o que você precisa para curtir a cidade."
+                : "Restaurants, bars, tango, transport and everything you need to enjoy the city."}
+          </p>
+          <Link
+            href={`/${l}`}
+            className="mt-8 inline-flex items-center gap-2 rounded-full bg-[color:var(--ink)] px-7 py-4 text-[11px] font-semibold uppercase tracking-[0.22em] text-white transition-colors hover:bg-[color:var(--brand)]"
+          >
+            {l === "es"
+              ? "Ver la guía"
+              : l === "pt"
+                ? "Ver o guia"
+                : "View the guide"}{" "}
+            <span aria-hidden>→</span>
+          </Link>
+        </div>
+      </section>
+
       {/* ── Footer accent ── */}
       <div className="flex items-center justify-center bg-white py-10">
         <span className="hairline" />
-        <span className="font-[family-name:var(--font-fraunces)] text-sm font-light italic text-[color:var(--ink-mute)]">
+        <Link
+          href={`/${l}`}
+          className="font-[family-name:var(--font-fraunces)] text-sm font-light italic text-[color:var(--ink-mute)] hover:text-[color:var(--brand)]"
+        >
           Guidr<span className="text-[color:var(--accent)]">.</span>
-        </span>
+        </Link>
         <span className="hairline" />
       </div>
     </div>

@@ -527,7 +527,7 @@ export const sections: Section[] = [
       {
         title: "Buenos Aires Bus — Hop on / Hop off",
         image: "/images/listings/bus-turistico.jpg",
-        mapsQuery: "Buenos Aires Bus parada Puerto Madero",
+        mapsUrl: "https://maps.app.goo.gl/1QcSKWEsSC5gActa9",
         proximity: { es: "Parada a 100 metros", en: "Stop 100m away", pt: "Parada a 100 metros" },
         description: {
           es: "Bus turístico con parada a metros del edificio. Recorrido por los principales atractivos de Buenos Aires con audioguía.",
@@ -541,6 +541,7 @@ export const sections: Section[] = [
       {
         title: "Aeroparque (AEP)",
         image: "/images/listings/aeroparque.jpeg",
+        mapsQuery: "Aeroparque Jorge Newbery Buenos Aires",
         description: {
           es: "20–25 min. Taxi ≈ USD 15 (en pesos). También Uber y transfers con stand en llegadas.",
           en: "20–25 min. Taxi ≈ USD 15 (in pesos). Also Uber and airport transfers at the arrivals stand.",
@@ -550,6 +551,7 @@ export const sections: Section[] = [
       {
         title: "Ezeiza (EZE)",
         image: "/images/listings/ezeiza.jpg",
+        mapsQuery: "Aeropuerto Internacional Ezeiza",
         description: {
           es: "30–45 min. Taxi ≈ USD 25 (en pesos). Uber y transfers disponibles antes de la salida.",
           en: "30–45 min. Taxi ≈ USD 25 (in pesos). Uber and transfers available before exit.",

@@ -255,7 +255,7 @@ export const properties: Record<string, Property> = {
       { name: "Karen", role: { es: "Anfitriona", en: "Host", pt: "Anfitriã" }, phone: "541130961959", whatsapp: true, image: "/images/property/karen.jpg" },
       { name: "Pablo", role: { es: "Anfitrión", en: "Host", pt: "Anfitrião" }, phone: "541136511204", whatsapp: true, image: "/images/property/pablo.jpg" },
       { name: "", role: { es: "Guardia del edificio", en: "Building guard", pt: "Guarita do edifício" }, phone: "541143141543", whatsapp: false, image: "/images/property/guardia.jpg" },
-      { name: "Daniel", role: { es: "Mantenimiento", en: "Maintenance", pt: "Manutenção" }, phone: "541144710402", whatsapp: true, image: "/images/property/daniel.jpg" },
+      { name: "Daniel", role: { es: "Anfitrión", en: "Host", pt: "Anfitrião" }, phone: "541144710402", whatsapp: true, image: "/images/property/daniel.jpg" },
     ],
   },
   "105": {
@@ -458,7 +458,7 @@ export const properties: Record<string, Property> = {
       { name: "Karen", role: { es: "Anfitriona", en: "Host", pt: "Anfitriã" }, phone: "541130961959", whatsapp: true, image: "/images/property/karen.jpg" },
       { name: "Pablo", role: { es: "Anfitrión", en: "Host", pt: "Anfitrião" }, phone: "541136511204", whatsapp: true, image: "/images/property/pablo.jpg" },
       { name: "", role: { es: "Guardia del edificio", en: "Building guard", pt: "Guarita do edifício" }, phone: "541143141543", whatsapp: false, image: "/images/property/guardia.jpg" },
-      { name: "Daniel", role: { es: "Mantenimiento", en: "Maintenance", pt: "Manutenção" }, phone: "541144710402", whatsapp: true, image: "/images/property/daniel.jpg" },
+      { name: "Daniel", role: { es: "Anfitrión", en: "Host", pt: "Anfitrião" }, phone: "541144710402", whatsapp: true, image: "/images/property/daniel.jpg" },
     ],
   },
 };

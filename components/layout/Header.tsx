@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { t, type Locale, locales } from "@/lib/i18n";
+import { MobileMenu } from "./MobileMenu";
 
 interface HeaderProps {
   locale: Locale;
@@ -36,22 +37,25 @@ export function Header({ locale }: HeaderProps) {
           ))}
         </nav>
 
-        <div className="flex items-center gap-1 text-[11px] font-medium uppercase tracking-[0.18em]">
-          {locales.map((l, i) => (
-            <span key={l} className="flex items-center">
-              {i > 0 && <span className="mx-1 text-[color:var(--ink-mute)]">·</span>}
-              <Link
-                href={`/${l}`}
-                className={
-                  l === locale
-                    ? "text-[color:var(--brand)]"
-                    : "text-[color:var(--ink-mute)] hover:text-[color:var(--ink)]"
-                }
-              >
-                {l}
-              </Link>
-            </span>
-          ))}
+        <div className="flex items-center gap-3">
+          <div className="flex items-center gap-1 text-[11px] font-medium uppercase tracking-[0.18em]">
+            {locales.map((l, i) => (
+              <span key={l} className="flex items-center">
+                {i > 0 && <span className="mx-1 text-[color:var(--ink-mute)]">·</span>}
+                <Link
+                  href={`/${l}`}
+                  className={
+                    l === locale
+                      ? "text-[color:var(--brand)]"
+                      : "text-[color:var(--ink-mute)] hover:text-[color:var(--ink)]"
+                  }
+                >
+                  {l}
+                </Link>
+              </span>
+            ))}
+          </div>
+          <MobileMenu locale={locale} sections={sections} />
         </div>
       </div>
     </header>
