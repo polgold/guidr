@@ -32,7 +32,7 @@ export type Property = {
   };
   checkIn: string;
   checkOut: string;
-  wifi: { ssid: string; password: string; band: string };
+  wifi: { ssid: string; password: string; band: string; qrImage?: string };
   voltage: string;
   doorCode: {
     image: string;
@@ -78,8 +78,8 @@ export const properties: Record<string, Property> = {
       },
     },
     checkIn: "15:00",
-    checkOut: "12:00",
-    wifi: { ssid: "Fibertel Wifi 526", password: "0013890843", band: "2.4 GHz" },
+    checkOut: "11:00",
+    wifi: { ssid: "Fibertel Wifi 526", password: "0013890843", band: "2.4 GHz", qrImage: "/images/property/wifi-qr-115.png" },
     voltage: "220V / 50Hz",
     doorCode: {
       image: "/images/property/cerradura.jpg",
@@ -281,8 +281,8 @@ export const properties: Record<string, Property> = {
       },
     },
     checkIn: "15:00",
-    checkOut: "12:00",
-    wifi: { ssid: "Dpto 105", password: "0018040402", band: "2.4 GHz" },
+    checkOut: "11:00",
+    wifi: { ssid: "Dpto 105", password: "0018040402", band: "2.4 GHz", qrImage: "/images/property/wifi-qr-105.png" },
     voltage: "220V / 50Hz",
     doorCode: {
       image: "/images/property/cerradura.jpg",

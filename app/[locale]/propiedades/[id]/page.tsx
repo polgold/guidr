@@ -25,6 +25,7 @@ const labels: Record<Locale, Record<string, string>> = {
     network: "Red",
     password: "Contraseña",
     band: "Banda",
+    scanQr: "Escaneá para conectarte",
     voltage: "Energía eléctrica",
     adapters: "Si trae adaptadores, deben ser Tipo C o Tipo I",
     address: "Ubicación",
@@ -61,6 +62,7 @@ const labels: Record<Locale, Record<string, string>> = {
     network: "Network",
     password: "Password",
     band: "Band",
+    scanQr: "Scan to connect",
     voltage: "Electrical power",
     adapters: "If bringing adapters, they must be Type C or Type I",
     address: "Location",
@@ -97,6 +99,7 @@ const labels: Record<Locale, Record<string, string>> = {
     network: "Rede",
     password: "Senha",
     band: "Banda",
+    scanQr: "Escaneie para conectar",
     voltage: "Energia elétrica",
     adapters: "Se trouxer adaptadores, devem ser Tipo C ou Tipo I",
     address: "Localização",
@@ -274,6 +277,22 @@ export default async function PropertyPage({
                 <p className="mt-1.5 text-lg font-semibold text-[color:var(--ink)]">{property.wifi.band}</p>
               </div>
             </div>
+            {property.wifi.qrImage && (
+              <div className="mt-6 flex flex-col items-center gap-3 border-t border-[color:var(--line)] pt-6">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[color:var(--ink-mute)]">
+                  {lbl.scanQr}
+                </p>
+                <div className="relative h-44 w-44 overflow-hidden rounded-xl bg-white p-3">
+                  <Image
+                    src={property.wifi.qrImage}
+                    alt={`QR WiFi ${property.wifi.ssid}`}
+                    fill
+                    className="object-contain p-3"
+                    sizes="176px"
+                  />
+                </div>
+              </div>
+            )}
           </Card>
         </div>
       </section>
