@@ -9,6 +9,14 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@exitmcp/auth-apikey": "^0.1.1",
+    "@exitmcp/auth-oauth": "^0.1.1",
+    "@exitmcp/core": "^0.1.0",
+    "@exitmcp/host-hostinger": "^0.1.1",
+    "@exitmcp/kv-upstash": "^0.1.1",
+    "@exitmcp/tools-content-mdx": "^0.1.2",
+    "@exitmcp/tools-fs": "^0.1.1",
+    "@exitmcp/tools-image": "^0.1.1",
     "@google/genai": "^1.48.0",
     "gray-matter": "^4.0.3",
     "next": "16.2.2",
