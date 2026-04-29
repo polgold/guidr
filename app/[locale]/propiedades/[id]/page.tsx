@@ -50,6 +50,8 @@ const labels: Record<Locale, Record<string, string>> = {
     petFriendly: "Pet Friendly",
     floor: "Piso",
     unit: "Depto",
+    poolNoticeTitle: "Aviso Importante",
+    poolNoticeMessage: "Desde el lunes 4 de mayo y hasta el 30 de junio, la piscina estará en mantenimiento y no podrá ser utilizada. Disculpas por las molestias.",
   },
   en: {
     welcome: "Welcome",
@@ -87,6 +89,8 @@ const labels: Record<Locale, Record<string, string>> = {
     petFriendly: "Pet Friendly",
     floor: "Floor",
     unit: "Unit",
+    poolNoticeTitle: "Important Notice",
+    poolNoticeMessage: "From Monday May 4 through June 30, the pool will be under maintenance and unavailable for use. We apologize for the inconvenience.",
   },
   pt: {
     welcome: "Bem-vindo",
@@ -124,6 +128,8 @@ const labels: Record<Locale, Record<string, string>> = {
     petFriendly: "Pet Friendly",
     floor: "Andar",
     unit: "Apto",
+    poolNoticeTitle: "Aviso Importante",
+    poolNoticeMessage: "A partir de segunda-feira 4 de maio e até 30 de junho, a piscina estará em manutenção e não poderá ser utilizada. Desculpe pelo inconveniente.",
   },
 };
 
@@ -239,6 +245,23 @@ export default async function PropertyPage({
           </div>
         </div>
       </header>
+
+      {/* ════════════════════════════════════════════
+          POOL MAINTENANCE NOTICE — remove after 2026-06-30
+          ════════════════════════════════════════════ */}
+      <section className="border-b border-amber-200 bg-amber-50 px-6 py-10 sm:py-12">
+        <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
+          <svg className="h-12 w-12 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+          </svg>
+          <p className="text-xs font-semibold uppercase tracking-[0.28em] text-amber-700">
+            {lbl.poolNoticeTitle}
+          </p>
+          <p className="font-[family-name:var(--font-fraunces)] text-xl font-light leading-relaxed text-amber-900 sm:text-2xl">
+            {lbl.poolNoticeMessage}
+          </p>
+        </div>
+      </section>
 
       {/* ════════════════════════════════════════════
           PET FRIENDLY (105 only)
